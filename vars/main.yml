@@ -1,0 +1,7 @@
+---
+# vars file for argocd
+argocd_platform: '{{ argocd_os }}-{{ argocd_arch }}'
+argocd_url: '{{ argocd_mirror }}/{{ argocd_ver }}/argocd-{{ argocd_platform }}'
+argocd_exe: '{{ argocd_install_dir }}/argocd-{{ argocd_ver }}'
+argocd_link: '{{ argocd_install_dir }}/argocd'
+argocd_checksum: '{{ argocd_checksums[argocd_ver][argocd_platform] }}'

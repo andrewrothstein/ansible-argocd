@@ -26,7 +26,6 @@ dlver () {
     printf "  %s:\n" $ver
     dl $ver linux amd64
     dl $ver darwin amd64
-    dl $ver windows amd64
 }
 
-dlver ${1:-v1.3.0}
+dlver ${1:-v1.4.2}

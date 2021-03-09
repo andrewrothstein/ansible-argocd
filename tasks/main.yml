@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: download
+- name: downloading {{ argocd_url }} to {{ argocd_exe }}
   become: yes
   become_user: root
   get_url:
@@ -17,7 +17,7 @@
     dest: '{{ argocd_exe }}'
     checksum: '{{ argocd_checksum }}'
     mode: 0755
-- name: link
+- name: linking {{ argocd_link }} to {{ argocd_exe }}
   become: yes
   become_user: root
   file:

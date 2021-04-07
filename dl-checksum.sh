@@ -28,4 +28,4 @@ dlver () {
     dl $ver darwin amd64
 }
 
-dlver ${1:-v1.8.7}
+dlver ${1:-v2.0.0}

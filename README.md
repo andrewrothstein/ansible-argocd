@@ -1,6 +1,6 @@
 andrewrothstein.argocd
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-argocd.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-argocd)
+![Build Status](https://github.com/andrewrothstein/ansible-argocd/actions/workflows/build.yml/badge.svg)
 
 Installs [argocd](https://argoproj.github.io/argo-cd/).
 

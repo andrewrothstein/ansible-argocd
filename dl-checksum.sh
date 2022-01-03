@@ -8,9 +8,10 @@ dl()
     local ver=$1
     local os=$2
     local arch=$3
+    local dotexe=${4:-}
     local platform="$os-$arch"
-    local url=$MIRROR/$ver/$APP-$platform
-    local lfile=$DIR/$APP-$ver-$platform
+    local url="${MIRROR}/${ver}/${APP}-${platform}${dotexe}"
+    local lfile="${DIR}/${APP}-${ver}-${platform}${dotexe}"
 
     if [ ! -e $lfile ];
     then
@@ -26,6 +27,7 @@ dlver () {
     printf "  %s:\n" $ver
     dl $ver linux amd64
     dl $ver darwin amd64
+    dl $ver windows amd64 .exe
 }
 
-dlver ${1:-v2.1.7}
+dlver ${1:-v2.2.2}

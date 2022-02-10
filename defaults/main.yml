@@ -1,6 +1,6 @@
 ---
 # defaults file for argocd
-argocd_ver: v2.2.2
+argocd_ver: v2.2.5
 argocd_mirror: https://github.com/argoproj/argo-cd/releases/download
 argocd_os: linux
 argocd_arch: amd64
@@ -188,3 +188,24 @@ argocd_checksums:
     darwin-amd64: sha256:ae241b0625499d9952b36b5b43aba5c5fe23a6c4fca8fa443868835620fabcee
     # https://github.com/argoproj/argo-cd/releases/download/v2.2.2/argocd-windows-amd64.exe
     windows-amd64: sha256:4c6ed1ab7e2f4b4785aca1a73d230b81cc9d4ef43ca23dd597c9a9425ba27cf4
+  v2.2.3:
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.3/argocd-linux-amd64
+    linux-amd64: sha256:0414b6c852644f11af9dad115c51f09cbdfd8d8af76a18533e828c9b7afd9209
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.3/argocd-darwin-amd64
+    darwin-amd64: sha256:fd0da7306693a9e00a0c5886ce9beb3a7219f85f58c85737d5e4206f87548742
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.3/argocd-windows-amd64.exe
+    windows-amd64: sha256:5004351d49c1a43cb95e581b35976d1af5d5ffd2e67e49fbaeb13ceb2776a0d3
+  v2.2.4:
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.4/argocd-linux-amd64
+    linux-amd64: sha256:efd966f9fae62c7c5e28ddebc5ad3120d4a1e1a6c4859ba3e3f5d06352a4b0bc
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.4/argocd-darwin-amd64
+    darwin-amd64: sha256:8229ea3b7e8e9033ebbd3db1fdb6444e836c432c6f7884b6a67d8049498cdc00
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.4/argocd-windows-amd64.exe
+    windows-amd64: sha256:e17b15aa1bfe4a83c7ad9b0cd0c42a276a3853e244b364fb04aa77a8c280d0ab
+  v2.2.5:
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.5/argocd-linux-amd64
+    linux-amd64: sha256:d2f726998dd6e09b357ac55686313c6a7ab84d1d856d2a7e998a1ee464a99972
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.5/argocd-darwin-amd64
+    darwin-amd64: sha256:037f49c85f4a74a6c6f820f6ec8cb4c4e05020e51ec652e8e7c71df234fbb0a0
+    # https://github.com/argoproj/argo-cd/releases/download/v2.2.5/argocd-windows-amd64.exe
+    windows-amd64: sha256:c2c02416ab44aa1d6edb62f8c89a787fd3cc3549e5154e5dc4391fa444b475e5

@@ -1,5 +1,7 @@
 ---
 # vars file for argocd
+argocd_os: '{{ ansible_system | lower }}'
+argocd_arch: '{{ argocd_arch_map[ansible_architecture] }}'
 argocd_platform: '{{ argocd_os }}-{{ argocd_arch }}'
 argocd_url: '{{ argocd_mirror }}/{{ argocd_ver }}/argocd-{{ argocd_platform }}'
 argocd_exe: '{{ argocd_install_dir }}/argocd-{{ argocd_ver }}'

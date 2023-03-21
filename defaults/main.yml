@@ -1,6 +1,6 @@
 ---
 # defaults file for argocd
-argocd_ver: v2.6.5
+argocd_ver: v2.6.6
 argocd_mirror: https://github.com/argoproj/argo-cd/releases/download
 argocd_arch_map:
   aarch64: arm64
@@ -581,3 +581,14 @@ argocd_checksums:
     darwin-arm64: sha256:fc0c576cd0f4fc9ec2702a69925fb1d34cfcf6571cbda4a445440ba2c1d413f3
     # https://github.com/argoproj/argo-cd/releases/download/v2.6.5/argocd-windows-amd64.exe
     windows-amd64: sha256:7d2ede8d75bfead5301e558b78a68f2e40e2e860734541f51c7fd98a6c193c79
+  v2.6.6:
+    # https://github.com/argoproj/argo-cd/releases/download/v2.6.6/argocd-linux-amd64
+    linux-amd64: sha256:d3ed61494dba51fff3e8568da7c38f620622f04d5cc2c3310d5c28ca66d7b033
+    # https://github.com/argoproj/argo-cd/releases/download/v2.6.6/argocd-linux-arm64
+    linux-arm64: sha256:c2588730b80b777184afcd35369cf698f4fde17f5ef8be4a123ff878a5fe15d7
+    # https://github.com/argoproj/argo-cd/releases/download/v2.6.6/argocd-darwin-amd64
+    darwin-amd64: sha256:e5b9946e40272f0bd84c6db9d86d07961240eac266d3db74b004e3f10e7ce13c
+    # https://github.com/argoproj/argo-cd/releases/download/v2.6.6/argocd-darwin-arm64
+    darwin-arm64: sha256:5ae4ac0723b5cc4de3e4d8d288411fcb3ff8ddab25bc457667a4709884a98f50
+    # https://github.com/argoproj/argo-cd/releases/download/v2.6.6/argocd-windows-amd64.exe
+    windows-amd64: sha256:a5dfee0b3ddd216d39ec38ab1386c8ccb3e214141625c508a9027595f681bc65

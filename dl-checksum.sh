@@ -27,9 +27,11 @@ dlver () {
     printf "  %s:\n" $ver
     dl $ver linux amd64
     dl $ver linux arm64
+    dl $ver linux ppc64le
+    dl $ver linux s390x
     dl $ver darwin amd64
     dl $ver darwin arm64
     dl $ver windows amd64 .exe
 }
 
-dlver ${1:-v2.7.7}
+dlver ${1:-v2.7.9}

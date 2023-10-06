@@ -34,4 +34,4 @@ dlver () {
     dl $ver windows amd64 .exe
 }
 
-dlver ${1:-v2.8.2}
+dlver ${1:-v2.8.4}

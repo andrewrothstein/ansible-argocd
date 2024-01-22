@@ -1,10 +1,14 @@
 ---
-- hosts: all
-  roles:
-    - role: '{{ playbook_dir }}'
+- name: Testing andrewrothstein.argocd
+  hosts: all
   tasks:
-    - command: /usr/local/bin/argocd version --client
+    - name: Installing andrewrothstein.argocd
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'argocd version --client'
+      ansible.builtin.command: /usr/local/bin/argocd version --client
+      changed_when: false
       register: argocd_test_output
-    - name: argocd version --client
-      debug:
+    - name: Output of 'argocd version --client'
+      ansible.builtin.debug:
         msg: '{{ argocd_test_output.stdout }}'

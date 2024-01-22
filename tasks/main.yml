@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -9,18 +9,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: downloading {{ argocd_url }} to {{ argocd_exe }}
+- name: Downloading {{ argocd_url }} to {{ argocd_exe }}
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ argocd_url }}'
     dest: '{{ argocd_exe }}'
     checksum: '{{ argocd_checksum }}'
-    mode: 0755
-- name: linking {{ argocd_link }} to {{ argocd_exe }}
+    mode: '755'
+- name: Linking {{ argocd_link }} to {{ argocd_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ argocd_exe }}'
     dest: '{{ argocd_link }}'
     state: link

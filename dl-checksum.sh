@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
-DIR=~/Downloads
+DIR=$(mktemp -d)
+trap 'rm -rf "$DIR"' EXIT
 MIRROR=https://github.com/argoproj/argo-cd/releases/download
 APP=argocd
 
@@ -32,10 +33,7 @@ dlver () {
     # https://github.com/argoproj/argo-cd/releases/download/v2.13.3/cli_checksums.txt
     local checksums_url="${MIRROR}/${ver}/cli_checksums.txt"
     local lchecksums="${DIR}/argocd_${ver}_checksums.txt"
-    if [ ! -e "${lchecksums}" ];
-    then
-        curl -fsSL --proto '=https' --tlsv1.2 -o "${lchecksums}" "${checksums_url}"
-    fi
+    curl -fsSL --proto '=https' --tlsv1.2 -o "${lchecksums}" "${checksums_url}"
 
     printf "  # %s\n" "$checksums_url"
     printf "  %s:\n" "$ver"
@@ -48,6 +46,6 @@ dlver () {
     dl "$lchecksums" "$ver" windows amd64 .exe
 }
 
-for v in "${@:-v3.6.1}"; do
+for v in "${@:-v3.6.2}"; do
     dlver "$v"
 done

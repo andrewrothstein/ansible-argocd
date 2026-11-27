@@ -46,6 +46,6 @@ dlver () {
     dl "$lchecksums" "$ver" windows amd64 .exe
 }
 
-for v in "${@:-v3.6.2}"; do
+for v in "${@:-v3.6.3}"; do
     dlver "$v"
 done
